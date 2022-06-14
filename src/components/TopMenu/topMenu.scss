@@ -1,0 +1,35 @@
+.navigation{
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.navigation_container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 6.7 rem;
+}
+.navigation_logo_container{
+  height: 3rem;
+  padding-right: 1rem;
+  margin-top: .3rem;
+}
+.navigation_link{
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  color: #ddd;
+  margin-right: 2rem;
+  &:hover {
+    color: rgb(155, 151, 151);
+  }
+}
+.navigation_search{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  margin-right: 1rem;
+}

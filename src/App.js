@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.scss";
+import TopMenu from "./components/TopMenu/TopMenu";
+import MainTrailer from "./components/Video/MainTrailer/MainTrailer";
+import { fetchData } from "./Services/Api";
 
 function App() {
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() => {
+    const test = fetchData();
+    setMovie(test);
+    console.log("movie", movie);
+  }, []);
+  console.log("movie");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+      <TopMenu />
+      <MainTrailer />
     </div>
   );
 }
